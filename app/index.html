@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en" ng-app="noteularApp">
+<head>
+  <meta charset="utf-8">
+  <title>Noteular</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="css/app.css">
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/note.component.js"></script>
+</head>
+<body ng-controller="NoteListCtrl">
+  <div id="notebook">
+    <div class="note" ng-repeat="note in notes">
+      <i class="material-icons note-remove" ng-click="notes.splice(notes.indexOf(note), 1)">delete</i>
+      <h class="note-title">{{note.title}}</h>
+      <p class="note-content">{{note.content}}</p>
+    </div>
+  </div>
+
+  <div id="controlbar">
+    <input placeholder="Note title" class="control-text control-title note-title" type="text" ng-model="controlTitleVal" />
+    <br />
+    <textarea class="control-text control-content note-content" placeholder="Put the content of the note here!" ng-model="controlContentVal"></textarea>
+    <div class="control control-button" type="button" ng-click="notes.push({'title': controlTitleVal, 'content': controlContentVal})"><i class="material-icons">queue</i></div>
+  </div>
+</body>
+</html>

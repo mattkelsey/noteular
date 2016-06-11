@@ -1,0 +1,119 @@
+/* app css stylesheet */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #DEB97E;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+ 
+/* Beautify Scroll Bar */
+
+::-webkit-scrollbar-track {
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background: rgba(150,150,150,0.8);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(150,150,150,0.4); 
+}
+
+#notebook {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#controlbar {
+    /* display: inline-block; */
+    padding: 30px;
+    height: 20%;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    background-color: #C9CEC7;
+}
+
+/* Note Styles */
+
+.note {
+    position: relative;
+    background-color: #799EAA;
+    color: #FFF;
+    height: 300px;
+    width: 23%;
+    flex-grow: 1;
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 5px 5px 30px #000;
+    word-break: break-all;
+}
+
+.note-title {
+    font-size: 1.7em;
+    font-weight: 900; 
+}
+
+.note-content {
+    font-size: 1.3em;
+    font-weight: 550;
+}
+
+.note-remove {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer; 
+}
+
+.control-text {
+    padding: 10px;
+    border: none;
+    border-bottom: solid 2px #969696;
+    transition: border 0.1s;
+    background-color: rgba(0, 0, 0, 0);
+    resize: none;
+    width: 75%;
+}
+.control-text:focus {
+    border-bottom: solid 4px #969696;
+    outline: none;
+}
+
+.control-content {
+    height: 60%;
+}
+
+.control-button {
+    border-style: solid;
+    border-width: 0px 0px 3px;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+    color: #FFF;	   
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    transition: all 200ms ease-in-out 0s;
+    padding: 20px;
+    border-color: #3AC162;
+	  background-color: #5FCF80;
+    margin-left: 20px;
+}
+.control-button:hover,
+.control-button:focus,
+.control-button:active {
+    background-color: #4BC970;
+    border-color: #3AC162;   
+}
+
+.material-icons {
+    font-size: 2em;
+}
