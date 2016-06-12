@@ -1,5 +1,5 @@
 angular.
-    module('noteular').
+    module('noteularApp').
     component('note', {
         template:
             '<div class="note">' +

@@ -4,7 +4,7 @@
 
 var noteularApp = angular.module('noteularApp', []);
 
-noteular.controller('NoteListCtrl', NoteListFunc);
+noteularApp.controller('NoteListCtrl', NoteListFunc);
 
 function NoteListFunc($scope) {
     $scope.controlTitleVal;
