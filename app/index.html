@@ -15,13 +15,19 @@
 <body ng-controller="NoteListCtrl">
   <div id="notebook">
     <div class="note" ng-repeat="note in notes">
-      <i class="material-icons note-remove" ng-click="notes.splice(notes.indexOf(note), 1)">delete</i>
+      <i class="material-icons note-remove ns" ng-click="notes.splice(notes.indexOf(note), 1)">delete</i>
       <h class="note-title">{{note.title}}</h>
       <p class="note-content">{{note.content}}</p>
 
-      <i class="material-icons note-settings" ng-click="showSettings = !showSettings">settings</i>
-      <div class="note-palette" ng-show="showSettings">
-        <i class="material-icons" ng-show="showSettings">restore</i>
+      <i class="material-icons note-settings ns" ng-click="showSettings = !showSettings; showColors = false">settings</i>
+      <div class="note-settings-tray ns" ng-show="showSettings">
+        <div class="note-palette" ng-show="showColors">
+          <i class="material-icons color-blue">brightness_1</i>
+          <i class="material-icons color-yellow">brightness_1</i>
+          <i class="material-icons color-orange">brightness_1</i>
+          <i class="material-icons color-red">brightness_1</i>
+        </div>
+        <i class="material-icons" ng-click="showColors = !showColors">color_lens</i>
       </div>
     </div>
   </div>

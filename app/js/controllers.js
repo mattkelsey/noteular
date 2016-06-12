@@ -11,5 +11,6 @@ function NoteListFunc($scope) {
     $scope.controlContentVal;
     $scope.id;
     $scope.showSettings;
+    $scope.color = "blue";
     $scope.notes = [{"title": "Welcome to Noteular", "content": "Create a note below!", "id": "0"}];
 }
