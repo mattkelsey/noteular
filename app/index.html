@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="css/app.css">
   <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
   <script src="js/controllers.js"></script>
   <!-- I am unsure whether notes should be implemented in compenent form... -->
   <!-- <script src="js/note.component.js"></script> -->
@@ -20,8 +21,8 @@
       <p class="note-content">{{note.content}}</p>
 
       <i class="material-icons note-settings ns" ng-click="showSettings = !showSettings; showColors = false">settings</i>
-      <div class="note-settings-tray ns" ng-show="showSettings">
-        <div class="note-palette" ng-show="showColors">
+      <div class="note-settings-tray ns slide" ng-show="showSettings">
+        <div class="note-palette slide" ng-show="showColors">
           <i class="material-icons color-blue">brightness_1</i>
           <i class="material-icons color-yellow">brightness_1</i>
           <i class="material-icons color-orange">brightness_1</i>
@@ -30,6 +31,9 @@
         <i class="material-icons" ng-click="showColors = !showColors">color_lens</i>
       </div>
     </div>
+    <!-- <div class="note"> -->
+    <!--   + -->
+    <!-- </div> -->
   </div>
 
   <div id="controlbar">

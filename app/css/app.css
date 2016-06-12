@@ -18,6 +18,19 @@ body {
     user-select: none;
 }
 
+/* Animinimations :D */
+
+.slide {
+    transition: 0.2s linear all;
+}
+.slide.ng-show {
+    opacity: 1;
+}
+.slide.ng-hide {
+    opacity: 0;
+}
+
+
 /* Beautify Scroll Bar */
 
 ::-webkit-scrollbar-track {
@@ -78,8 +91,7 @@ body {
 .note-remove {
     position: absolute;
     bottom: 10px;
-    right: 10px;
-    cursor: pointer; 
+    right: 10px; 
 }
 
 .note-settings {
@@ -102,21 +114,18 @@ body {
 }
 
 /* Note Color Icons || Palette from: https://coolors.co/app/083d77-ebebd3-f4d35e-ee964b-f95738*/
+
 .color-blue {
     color: #083D77;
-    background-color: #083D77;
 }
 .color-yellow {
     color: #F4D35E;
-    background-color: #F4D35E;
 }
 .color-orange {
     color: #EE964B;
-    background-color: #EE964B;
 }
 .color-red {
     color: #F95738;
-    background-color: #F95738;
 }
 
 .control-text {
@@ -162,4 +171,5 @@ body {
 
 .material-icons {
     font-size: 2em;
+    cursor: pointer;
 }
