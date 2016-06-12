@@ -20,16 +20,26 @@ body {
 
 /* Animinimations :D */
 
-.slide {
-    transition: 0.2s linear all;
+.slide-y {
+    /* transition: 0.2s linear all; */
+    overflow-y: hidden;
+    transition-property: all;
+	  transition-duration: .5s;
+	  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
 }
-.slide.ng-show {
-    opacity: 1;
-}
-.slide.ng-hide {
-    opacity: 0;
+.slide-y.ng-hide {
+    /* opacity: 0; */
+    height: 0px;
 }
 
+
+.fade {
+    transition: 0.2s linear all;
+    opacity: 1;
+}
+.fade.ng-hide {
+    opacity: 0;
+}
 
 /* Beautify Scroll Bar */
 
@@ -78,6 +88,12 @@ body {
     word-break: break-all;
 }
 
+.note-text-container {
+    overflow-y: scroll;
+    width: 100%;
+    height: 90%;
+}
+
 .note-title {
     font-size: 1.7em;
     font-weight: 900; 
@@ -103,12 +119,19 @@ body {
 .note-settings-tray {
     position: absolute;
     bottom: 5px;
-    left: 40px;
+    left: 30px;
     width: 70%;
     margin-left: 10px;
 }
 
+.note-tray-icons {
+    margin-left: 10px;
+}
+
 .note-palette {
+    position: absolute;
+    left: 10px;
+    bottom: 30px;
     width: 2em;
     height: 135px;
 }
@@ -118,27 +141,39 @@ body {
 .color-blue {
     color: #083D77;
 }
+.bg-color-blue {
+    background-color: #083D77;
+}
 .color-yellow {
     color: #F4D35E;
+}
+.bg-color-yellow {
+    background-color: #F4D35E;
 }
 .color-orange {
     color: #EE964B;
 }
+.bg-color-orange {
+    background-color: #EE964B;
+}
 .color-red {
     color: #F95738;
+}
+.bg-color-red {
+    background-color: #F95738;
 }
 
 .control-text {
     padding: 10px;
     border: none;
-    border-bottom: solid 2px #969696;
+    border-bottom: solid 2px #FFF;
     transition: border 0.1s;
     background-color: rgba(0, 0, 0, 0);
     resize: none;
     width: 75%;
 }
 .control-text:focus {
-    border-bottom: solid 4px #969696;
+    border-bottom: solid 4px #FFF;
     outline: none;
 }
 
@@ -160,7 +195,10 @@ body {
     padding: 20px;
     border-color: #3AC162;
 	  background-color: #5FCF80;
-    margin-left: 20px;
+
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
 }
 .control-button:hover,
 .control-button:focus,
