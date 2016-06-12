@@ -73,6 +73,20 @@ body {
     cursor: pointer; 
 }
 
+.note-settings {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.note-palette {
+    position: absolute;
+    bottom: 5px;
+    left: 40px;
+    width: 70%;
+    margin-left: 10px;
+}
+
 .control-text {
     padding: 10px;
     border: none;

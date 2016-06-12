@@ -18,6 +18,11 @@
       <i class="material-icons note-remove" ng-click="notes.splice(notes.indexOf(note), 1)">delete</i>
       <h class="note-title">{{note.title}}</h>
       <p class="note-content">{{note.content}}</p>
+
+      <i class="material-icons note-settings" ng-click="showSettings = !showSettings">settings</i>
+      <div class="note-palette" ng-show="showSettings">
+        <i class="material-icons" ng-show="showSettings">restore</i>
+      </div>
     </div>
   </div>
 
