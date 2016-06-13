@@ -15,7 +15,7 @@
 </head>
 <body ng-controller="NoteListCtrl">
   <div id="notebook">
-    <div class="note" ng-repeat="note in notes">
+    <div class="note bg-color-blue" ng-repeat="note in notes">
       <i class="material-icons note-remove ns" ng-click="notes.splice(notes.indexOf(note), 1)">delete</i>
       <div class="note-text-container">
         <h class="note-title">{{note.title}}</h>
@@ -34,11 +34,11 @@
       </div>
     </div>
 
-    <div class="note bg-color-blue">
+    <div class="note" id="control-note">
       <input placeholder="Note title" class="control-text control-title note-title" type="text" ng-model="controlTitleVal" />
       <br />
-      <textarea class="control-text control-content note-content" placeholder="Put the content of the note here!" ng-model="controlContentVal"></textarea>
-      <div class="control control-button" type="button" ng-click="notes.push({'title': controlTitleVal, 'content': controlContentVal})"><i class="material-icons">queue</i></div>
+      <textarea class="control-text control-content note-content" placeholder="Put the content of the note here!" ng-model="controlContentVal" ng-keypress="handleNoteKey($event)"></textarea>
+      <div class="control control-button" type="button" ng-click="makeNote(controlTitleVal, controlContentVal)"><i class="material-icons">queue</i></div>
   </div>
   </div>
 </body>
