@@ -16,6 +16,7 @@ function NoteListFunc($scope) {
     $scope.makeNote = function (title, content) {
         $scope.notes.push({'title': title, 'content': content});
         $scope.controlTitleVal = "";
+        $scope.controlContentVal = "";
     }
 
     $scope.handleNoteKey = function(event) {
@@ -43,7 +44,7 @@ function NoteListFunc($scope) {
             noteBody.removeClass("bg-color-yellow");
             noteBody.removeClass("bg-color-red");
         } else if (target.hasClass("color-red")) {
-            noteBody.addClass("bg-color-red"); 
+            noteBody.addClass("bg-color-red");
             noteBody.removeClass("bg-color-blue");
             noteBody.removeClass("bg-color-yellow");
             noteBody.removeClass("bg-color-orange");
