@@ -33,10 +33,10 @@ body {
 }
 
 .slide-x {
-    max-width: 2560px;
+    max-width: 1900px;
     overflow-x: hidden;
     transition-property: all;
-    transition-duration: .7s;
+    transition-duration: .5s;
     transition-timing-function: linear;
 }
 .slide-x.ng-hide {

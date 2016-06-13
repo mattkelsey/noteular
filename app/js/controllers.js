@@ -12,7 +12,6 @@ function NoteListFunc($scope) {
     $scope.id;
     $scope.showSettings;
     $scope.notes = [{"title": "Welcome to Noteular", "content": "Create a note below!", "id": "0"}];
-    $scope.hidden = false;
 
     $scope.makeNote = function (title, content) {
         $scope.notes.push({'title': title, 'content': content});
