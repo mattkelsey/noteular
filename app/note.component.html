@@ -1,0 +1,16 @@
+<i class="material-icons note-remove ns" ng-click="$ctrl.hidden = true">delete</i>
+<div class="note-text-container">
+  <h class="note-title">{{note.title}}</h>
+  <p class="note-content">{{note.content}}</p>
+</div>
+<i class="material-icons note-settings ns" ng-click="showSettings = !showSettings; showColors = false">settings</i>
+<div class="note-settings-tray ns fade" ng-show="showSettings">
+  <div class="note-palette slide-y" ng-show="showColors">
+      <i class="material-icons color-blue">brightness_1</i>
+      <i class="material-icons color-yellow">brightness_1</i>
+      <i class="material-icons color-orange">brightness_1</i>
+      <i class="material-icons color-red">brightness_1</i>
+  </div>
+  <i class="material-icons note-tray-icons" ng-click="showColors = !showColors">color_lens</i>
+  <i class="material-icons note-tray-icons" ng-click="">send</i>
+</div>
