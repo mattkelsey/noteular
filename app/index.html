@@ -15,12 +15,12 @@
 <body ng-controller="NoteListCtrl">
   <div id="notebook">
 
-    <note class="note slide-x bg-color-blue" ng-hide="hidden" ng-repeat="note in notes"></note>
+    <note class="note slide-x bg-color-blue" ng-hide="ctrl.hidden" ng-repeat="note in notes"></note>
 
     <div class="note" id="control-note">
       <input placeholder="Note title" class="control-text control-title note-title" type="text" ng-model="controlTitleVal" />
       <br />
-      <textarea class="control-text control-content note-content" placeholder="Put the content of the note here!" ng-model="controlContentVal" ng-keypress="handleNoteKey($event)"></textarea>
+      <textarea class="control-text control-content note-content" placeholder="Put the content of the note here!" ng-model="$ctrl.controlContentVal" ng-keypress="handleNoteKey($event)"></textarea>
       <div class="control control-button ns" type="button" ng-click="makeNote(controlTitleVal, controlContentVal)"><i class="material-icons">queue</i></div>
   </div>
   </div>

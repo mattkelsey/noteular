@@ -2,7 +2,9 @@ angular.
     module('noteularApp').
     component('note', {
         templateUrl: 'note.component.html',
-        controller: NoteController
+        controller: NoteController,
+        scope: true,
+        controllerAs: 'ctrl'
     });
 
 
@@ -21,7 +23,7 @@ function NoteController () {
     }
     var handleNoteKey = function(event) {
         if(event.keyCode == 13) {
-            makeNote($scope.controlTitleVal, $scope.controlContentVal);
+            makeNote(controlTitleVal, controlContentVal);
         }
     }
 
